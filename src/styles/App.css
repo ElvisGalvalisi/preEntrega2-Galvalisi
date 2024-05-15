@@ -1,8 +1,13 @@
 body {
-    background: linear-gradient(to right, rgb(0, 0, 0), rgba(199, 199, 199, 0.562), rgba(19, 17, 17, 0.562)  );
+   /* background: linear-gradient(to right, rgb(3, 3, 3), rgb(185, 178, 178), rgba(19, 17, 17, 0.562)  );
+    background: linear-gradient(to right, rgba(39, 8, 8, 0.562), rgba(0, 0, 0, 0.562), rgb(0, 0, 0) );*/
+    
+    background: linear-gradient(to right,rgb(0, 0, 0), rgb(44, 42, 42));
     font-family: 'Prosto One';
-    color: rgb(167, 4, 4);
+    font-size: 20px;
+    color: rgb(214, 210, 210);
     padding-bottom: 100px;
+    font-style: solid bold;
 }
 
 .prosto-one-regular {
@@ -17,7 +22,7 @@ body {
 }
 
 header {
-    background: linear-gradient(to left, rgba(199, 199, 199, 0.562), rgb(0, 0, 0), rgba(36, 35, 35, 0.562)  );
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.562), rgba(129, 126, 126, 0.562), rgb(88, 15, 15)  );
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,6 +30,11 @@ header {
     padding-right: 20px;
     bottom: 0;
     height: 95px;
+    color: rgb(231, 231, 231);
+    font-size: 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .logo{
@@ -38,7 +48,7 @@ header {
 .menu-nav {
     display: flex;
     list-style-type: none;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .lista-nav {
@@ -47,8 +57,12 @@ header {
 
 .lista-nav:hover{
     background-color: rgb(112, 112, 112);
+    /*padding: 4px;*/
+    border-radius: 5%;
+    height: 100%;
     cursor: pointer;
 }
+
 
 .photo-container{
     display: grid;
@@ -85,8 +99,8 @@ header {
  }
  
  .img-redes{
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
     margin: .1em .5em;
     text-align: center;
  }

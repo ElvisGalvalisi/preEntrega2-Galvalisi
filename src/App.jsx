@@ -9,12 +9,11 @@ function App() {
   return (
     <>
 
-      <Header />
+      <Header /> 
 
-      <ItemListContainer greeting="Hola, soy una prop" />
+      <ItemListContainer greeting="Hola, soy una prop" /> 
 
-      <Footer />
-
+      <Footer /> 
     </>
   )
 }
