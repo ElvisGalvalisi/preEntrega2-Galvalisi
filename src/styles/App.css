@@ -1,8 +1,8 @@
 body {
-   /* background: linear-gradient(to right, rgb(3, 3, 3), rgb(185, 178, 178), rgba(19, 17, 17, 0.562)  );
+    /* background: linear-gradient(to right, rgb(3, 3, 3), rgb(185, 178, 178), rgba(19, 17, 17, 0.562)  );
     background: linear-gradient(to right, rgba(39, 8, 8, 0.562), rgba(0, 0, 0, 0.562), rgb(0, 0, 0) );*/
-    
-    background: linear-gradient(to right,rgb(0, 0, 0), rgb(44, 42, 42));
+
+    background: linear-gradient(to right, rgb(0, 0, 0), rgb(44, 42, 42));
     font-family: 'Prosto One';
     font-size: 20px;
     color: rgb(214, 210, 210);
@@ -22,7 +22,7 @@ body {
 }
 
 header {
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.562), rgba(129, 126, 126, 0.562), rgb(88, 15, 15)  );
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.562), rgba(129, 126, 126, 0.562), rgb(88, 15, 15));
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,9 +37,9 @@ header {
     width: 100%;
 }
 
-.logo{
+.logo {
     height: 70px;
-    width:  auto;
+    width: auto;
     padding: 0;
     margin-left: 20px;
 }
@@ -55,7 +55,7 @@ header {
     text-decoration: none;
 }
 
-.lista-nav:hover{
+.lista-nav:hover {
     background-color: rgb(112, 112, 112);
     /*padding: 4px;*/
     border-radius: 5%;
@@ -64,15 +64,37 @@ header {
 }
 
 
-.photo-container{
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
+.photo-container {
+
+    margin: 100px auto;
+    max-width: fit-content;
 
 }
 
-.footer{
-    background: linear-gradient(to right, rgba(39, 8, 8, 0.562), rgba(0, 0, 0, 0.562), rgb(0, 0, 0) );
+.fotos-cuadricula {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    
+}
+
+.item-foto {
+    background-color: rgb(49, 48, 48);
+    border-radius: .5rem;
+    padding: 1rem;
+    width: auto;
+    height: 15rem;
+}
+.item-foto:active {
+    width: auto;
+    height: 50rem;
+    cursor: pointer;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.footer {
+    background: linear-gradient(to right, rgba(39, 8, 8, 0.562), rgba(0, 0, 0, 0.562), rgb(0, 0, 0));
     color: rgb(0, 0, 0);
     position: fixed;
     padding: 1rem;
@@ -81,26 +103,27 @@ header {
     height: 3.5em;
     text-align: center;
     display: flex;
-    justify-content:space-evenly;
-    
+    justify-content: space-evenly;
+
 }
 
-.derechos{
+.derechos {
     color: whitesmoke;
 }
 
-.nombre{
+.nombre {
     color: whitesmoke;
 }
 
- .lista-redes{
+.lista-redes {
     list-style-type: none;
-    
- }
- 
- .img-redes{
+
+}
+
+.img-redes {
     height: 25px;
     width: 25px;
     margin: .1em .5em;
     text-align: center;
- }
+}
+
