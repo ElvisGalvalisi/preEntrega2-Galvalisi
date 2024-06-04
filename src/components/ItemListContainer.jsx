@@ -33,7 +33,7 @@ export const ItemListContainer = ({ greeting }) => {
 
         } else {
           setTitulo(cat.find((categ)=> categ.id === deporteID).nombre)
-          setFotos(res.filter((ph) => ph.evento.nombre === deporteID))
+          setFotos(res.filter((ph) => ph.evento.id === deporteID))
 
         }
 
