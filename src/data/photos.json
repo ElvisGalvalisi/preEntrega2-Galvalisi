@@ -1,92 +1,290 @@
 [
     {
         "id": 1,
-        "imagen": "src/photos/EFG_0986.jpg",
-        "nombre": "EFG_0986.jpg.jpg",
-        "precio": 1500
+        "imagen": "/src/photos/EFG_0882.jpg",
+        "nombre": "EFG_0882.jpg",
+        "precio": 1500,
+        "evento": 
+            {
+                "id": "handball",
+                "nombre": "handball"
+            }
+        
     },
     {
         "id": 2,
-        "imagen": "src/photos/EFG_0920.jpg",
-        "nombre": "EFG_0920.jpg",
-        "precio": 1500
+        "imagen": "/src/photos/EFG_0909.jpg",
+        "nombre": "EFG_0909.jpg",
+        "precio": 1500,
+        "evento": 
+            {
+                "id": "handball",
+                "nombre": "handball"
+            }
+        
     },
     {
         "id": 3,
-        "imagen": "src/photos/EFG_0935.jpg",
-        "nombre": "EFG_0935.jpg",
-        "precio": 1500
+        "imagen": "/src/photos/EFG_0920.jpg",
+        "nombre": "EFG_0920.jpg",
+        "precio": 1500,
+        "evento": 
+            {
+                "id": "futbol",
+                "nombre": "futbol"
+            }
+        
     },
     {
         "id": 4,
-        "imagen": "src/photos/EFG_0981.jpg",
-        "nombre": "EFG_0981.jpg",
-        "precio": 1500
+        "imagen": "/src/photos/EFG_0926.jpg",
+        "nombre": "EFG_0926.jpg",
+        "precio": 1500,
+        "evento": 
+            {
+                "id": "handball",
+                "nombre": "handball"
+            }
+        
     },
     {
         "id": 5,
-        "imagen": "src/photos/EFG_0985.jpg",
-        "nombre": "EFG_0985.jpg",
-        "precio": 1500
+        "imagen": "/src/photos/EFG_0935.jpg",
+        "nombre": "EFG_0935.jpg",
+        "precio": 1500,
+        "evento": 
+            {
+                "id": "futbol",
+                "nombre": "futbol"
+            }
+        
     },
     {
         "id": 6,
-        "imagen": "src/photos/EFG_1025.jpg",
-        "nombre": "EFG_1025.jpg",
-        "precio": 1500
+        "imagen": "/src/photos/EFG_0936.jpg",
+        "nombre": "EFG_0936.jpg",
+        "precio": 1500,
+        "evento": 
+            {
+                "id": "handball",
+                "nombre": "handball"
+            }
+        
     },
     {
         "id": 7,
-        "imagen": "src/photos/EFG_1028.jpg",
-        "nombre": "EFG_1028.jpg",
-        "precio": 1500
-    },
-    {
-        "id": 8,
-        "imagen": "src/photos/EFG_1055.jpg",
-        "nombre": "EFG_1055.jpg",
-        "precio": 1500
+        "imagen": "/src/photos/EFG_0981.jpg",
+        "nombre": "EFG_0981.jpg",
+        "precio": 1500,
+        "evento": 
+            {
+                "id": "futbol",
+                "nombre": "futbol"
+            }
+        
     },
     {
         "id": 9,
-        "imagen": "src/photos/EFG_1073.jpg",
-        "nombre": "EFG_1073.jpg",
-        "precio": 1500
+        "imagen": "/src/photos/EFG_0985.jpg",
+        "nombre": "EFG_0985.jpg",
+        "precio": 1500,
+        "evento": 
+            {
+                "id": "futbol",
+                "nombre": "futbol"
+            }
+        
     },
     {
         "id": 10,
-        "imagen": "src/photos/EFG_1096.jpg",
-        "nombre": "EFG_1096.jpg",
-        "precio": 1500
+        "imagen": "/src/photos/EFG_0986.jpg",
+        "nombre": "EFG_0986.jpg",
+        "precio": 1500,
+        "evento": 
+            {
+                "id": "futbol",
+                "nombre": "futbol"
+            }
+        
     },
     {
         "id": 11,
-        "imagen": "src/photos/EFG_1121.jpg",
-        "nombre": "EFG_1121.jpg",
-        "precio": 1500
+        "imagen": "/src/photos/EFG_0994.jpg",
+        "nombre": "EFG_0994.jpg",
+        "precio": 1500,
+        "evento": 
+            {
+                "id": "handball",
+                "nombre": "handball"
+            }
+        
     },
     {
         "id": 12,
-        "imagen": "src/photos/EFG_1131.jpg",
-        "nombre": "EFG_1131.jpg",
-        "precio": 1500
+        "imagen": "/src/photos/EFG_1025.jpg",
+        "nombre": "EFG_1025.jpg",
+        "precio": 1500,
+        "evento": 
+            {
+                "id": "futbol",
+                "nombre": "futbol"
+            }
+        
     },
     {
         "id": 13,
-        "imagen": "src/photos/EFG_1132.jpg",
-        "nombre": "EFG_1132.jpg",
-        "precio": 1500
+        "imagen": "/src/photos/EFG_1028.jpg",
+        "nombre": "EFG_1028.jpg",
+        "precio": 1500,
+        "evento": 
+            {
+                "id": "futbol",
+                "nombre": "futbol"
+            }
+        
     },
     {
         "id": 14,
-        "imagen": "src/photos/EFG_1134.jpg",
-        "nombre": "EFG_1134.jpg",
-        "precio": 1500
+        "imagen": "/src/photos/EFG_1047.jpg",
+        "nombre": "EFG_1047.jpg",
+        "precio": 1500,
+        "evento": 
+            {
+                "id": "handball",
+                "nombre": "handball"
+            }
+        
     },
     {
         "id": 15,
-        "imagen": "src/photos/EFG_1139.jpg",
+        "imagen": "/src/photos/EFG_1055.jpg",
+        "nombre": "EFG_1055.jpg",
+        "precio": 1500,
+        "evento": 
+            {
+                "id": "futbol",
+                "nombre": "futbol"
+            }
+        
+    },
+    {
+        "id": 16,
+        "imagen": "/src/photos/EFG_1073.jpg",
+        "nombre": "EFG_1073.jpg",
+        "precio": 1500,
+        "evento": 
+            {
+                "id": "futbol",
+                "nombre": "futbol"
+            }
+        
+    },
+    {
+        "id": 17,
+        "imagen": "/src/photos/EFG_1096.jpg",
+        "nombre": "EFG_1096.jpg",
+        "precio": 1500,
+        "evento": 
+            {
+                "id": "futbol",
+                "nombre": "futbol"
+            }
+        
+    },
+    {
+        "id": 18,
+        "imagen": "/src/photos/EFG_1121.jpg",
+        "nombre": "EFG_1121.jpg",
+        "precio": 1500,
+        "evento": 
+            {
+                "id": "futbol",
+                "nombre": "futbol"
+            }
+        
+    },
+    {
+        "id": 19,
+        "imagen": "/src/photos/EFG_1128.jpg",
+        "nombre": "EFG_1128.jpg",
+        "precio": 1500,
+        "evento": 
+            {
+                "id": "handball",
+                "nombre": "handball"
+            }
+        
+    },
+    {
+        "id": 20,
+        "imagen": "/src/photos/EFG_1131.jpg",
+        "nombre": "EFG_1131.jpg",
+        "precio": 1500,
+        "evento": 
+            {
+                "id": "futbol",
+                "nombre": "futbol"
+            }
+        
+    },
+    {
+        "id": 21,
+        "imagen": "/src/photos/EFG_1132.jpg",
+        "nombre": "EFG_1132.jpg",
+        "precio": 1500,
+        "evento": 
+            {
+                "id": "futbol",
+                "nombre": "futbol"
+            }
+        
+    },
+    {
+        "id": 22,
+        "imagen": "/src/photos/EFG_1134.jpg",
+        "nombre": "EFG_1134.jpg",
+        "precio": 1500,
+        "evento": 
+            {
+                "id": "futbol",
+                "nombre": "futbol"
+            }
+        
+    },
+    {
+        "id": 23,
+        "imagen": "/src/photos/EFG_1138.jpg",
+        "nombre": "EFG_1138.jpg",
+        "precio": 1500,
+        "evento": 
+            {
+                "id": "handball",
+                "nombre": "handball"
+            }
+        
+    },
+    {
+        "id": 24,
+        "imagen": "/src/photos/EFG_1139.jpg",
         "nombre": "EFG_1139.jpg",
-        "precio": 1500
+        "precio": 1500,
+        "evento": 
+            {
+                "id": "futbol",
+                "nombre": "futbol"
+            }
+        
+    },
+    {
+        "id": 25,
+        "imagen": "/src/photos/EFG_1945.jpg",
+        "nombre": "EFG_1945.jpg",
+        "precio": 1500,
+        "evento": 
+            {
+                "id": "handball",
+                "nombre": "handball"
+            }
+        
     }
 ]

@@ -1,0 +1,10 @@
+[
+    {
+        "id": "futbol",
+        "nombre": "FUTBOL"
+    },
+    {
+        "id": "handball",
+        "nombre": "HANDBALL"
+    }
+]

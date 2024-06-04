@@ -9,7 +9,7 @@ export const ItemList = ({fotos}) => {
           fotos.map(foto => {
             return <Item key={foto.id} foto={foto}/>
           })
-          : <p>No hay Fotos</p>
+          : <h3>Cargando fotografías.</h3>
       }
       </div>
 
