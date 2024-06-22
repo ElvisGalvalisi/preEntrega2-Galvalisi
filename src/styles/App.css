@@ -69,23 +69,28 @@ header {
 
 
 .photo-container {
-    
-    margin: 100px auto;
-    max-width: fit-content;
 
+    margin: 100px 1rem;
 
 }
 
 .fotos-cuadricula {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
-    top: 0;
+    gap: 2.5rem;
+    /*grid-template-columns: repeat(4, 1fr);*/
+    /*top: 0;*/
+    grid-auto-flow: dense;
+    grid-auto-rows: 20rem;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    
     
 }
 
+
+
 .card-foto{
     text-align: center;
+    margin-bottom: 15px;
 }
 
 .item-foto {
@@ -98,10 +103,21 @@ header {
     margin: auto;
     display: flex;
     justify-content: center;
+    
 }
+
+.titulo-item-foto{
+    margin-top: 0.5rem;
+    font-size: 15px;
+}
+
+
 
 .item-foto-ampliar, .item-foto-ampliar:visited{
     color: rgb(165, 2, 2);
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
 }
 
 
@@ -116,7 +132,6 @@ header {
     background: linear-gradient(to right, rgba(39, 8, 8, 0.562), rgba(0, 0, 0, 0.562), rgb(0, 0, 0));
     color: rgb(0, 0, 0);
     position: fixed;
-    /*padding: 1rem;*/
     bottom: 0;
     width: 100%;
     height: 3.5em;
@@ -136,11 +151,13 @@ header {
     color: whitesmoke;
 }
 
-.lista-redes {
-    margin-top: 1.25rem;
+.redes {
+    margin-top: 0.8rem;
     list-style-type: none;
 
 }
+
+
 
 .img-redes {    
     height: 25px;
@@ -174,6 +191,108 @@ header {
 
 .item-foto-ampliada{
     width: auto;
-    height: 40rem;
+    height: 35rem;
     text-align: center;
+    font-size: medium;
+    margin-top: 0;
+}
+
+.item-contador{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    color: rgb(214, 210, 210);
+ 
+}
+
+
+
+.btn-Agregar{
+    margin-top: 0.5em;
+    margin-left: .5em;
+    background-color: rgb(19, 22, 20);
+    color: rgb(167, 37, 37);
+    font-size: 15px;
+}
+
+.btn-Vaciar{
+    margin-top: 0.5em;
+    margin-left: 1em;
+    background-color: rgb(248, 47, 47);
+    color: rgb(19, 22, 20);
+    font-size: 25px;
+    
+}
+
+.btn-Vaciar:hover{
+    background-color: rgb(255, 0, 0);
+    color: rgb(19, 22, 20);
+}
+.carrito{
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 60px;
+    margin-right: 2rem;
+}
+
+.carrrito-widget{
+    text-decoration: none;
+}
+
+.carrito-container{
+    user-select: none;
+}
+
+
+.contador-widget{
+    background-color: rgb(167, 37, 37);
+    border-radius: 40%;
+    text-align: center;
+    font-size: 17px;
+    padding-right: 1.5px;
+    margin-top: 1rem;
+    
+    
+}
+
+
+.encabezado-carrito{
+
+text-align: center;
+font-size: 20px;
+margin-bottom: 1rem;
+}
+
+.item-foto-carrito{
+    height: 100px;
+    width: auto;
+}
+
+.btn-suma-resta{
+    margin: 0.5em;
+    margin-top: .5rem;
+}
+
+.btn-suma-resta:hover, .btn-Agregar:hover, .btn-Vaciar:hover, .item-foto-ampliar:hover{
+    cursor: pointer;
+}
+
+.th-td{
+    text-align: center;
+    padding-left: 1rem;
+    
+}
+
+.btn-borrar{
+    background-color: black;
+    margin-left: 2rem;
+    font-size: large;
+    
+}
+[table]{
+    user-select: none;
 }

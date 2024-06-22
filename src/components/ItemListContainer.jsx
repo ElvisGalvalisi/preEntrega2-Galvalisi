@@ -19,7 +19,7 @@ export const ItemListContainer = ({ greeting }) => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(datos)
-      }, 1500);
+      }, 500);
     })
   }
 

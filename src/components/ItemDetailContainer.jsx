@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import datos from '../data/photos.json'
 import { ItemDetail } from './ItemDetail';
@@ -11,10 +11,13 @@ export const ItemDetailContainer = () => {
 
     let [foto, setFoto] = useState();
 
+
+
+
     useEffect(() => {
         setTimeout(() => {
             setFoto(datos.find((ph) => ph.id === parseInt(itemID)));
-          }, 1500);
+          }, 500);
         
 
     }, [itemID])
