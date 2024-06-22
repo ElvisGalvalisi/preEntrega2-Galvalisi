@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import { ItemList } from './ItemList'
-import datos from '../data/photos.json'
-import cat from '../data/categorias.json'
 import { useParams } from 'react-router-dom'
+import { collection, getDocs, query, where } from 'firebase/firestore'
+import { db } from '../firebase/config'
+
 
 
 //recibe la prop del padre por parámetro.
@@ -11,39 +12,42 @@ export const ItemListContainer = ({ greeting }) => {
   //se recibe el id de categoria por parámetro en el useParams
   let { deporteID } = useParams();
 
-  const [titulo, setTitulo] = useState("FOTOS")
+  const [titulo, setTitulo] = useState("FOTOS");
 
-  let [fotos, setFotos] = useState([])
-
-  const buscarFotos = () => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(datos)
-      }, 500);
-    })
-  }
+  let [fotos, setFotos] = useState([]);
 
   useEffect(() => {
-    buscarFotos()
+    //se crea la referencia a la base de datos para acceder a la colección.
+    const photoRef = collection(db, 'photos');
+
+    //se filtran las categorias.
+    const qry = deporteID ? query(photoRef, where("evento.id", "==", deporteID)) : photoRef;
+
+    const catagoriaRef = collection(db, 'categorias');
+    let qryCat = deporteID && query(catagoriaRef, where('id', "==", deporteID))
+
+    //para traer los documentos de la colección.
+    getDocs(qry)
       .then((res) => {
-        if (!deporteID) {
-          setTitulo("FOTOS")
-          setFotos(res)
-
-
-        } else {
-          setTitulo(cat.find((categ)=> categ.id === deporteID).nombre)
-          setFotos(res.filter((ph) => ph.evento.id === deporteID))
-
-        }
+        setFotos(
+          res.docs.map((doc) => {
+            return { ...doc.data(), id: doc.id }
+          }))
 
       })
+    if (deporteID) {
+      getDocs(qryCat)
+        .then((res) => {
+          setTitulo(res.docs[0].data().nombre)
+        })
 
-
+    }else{
+      setTitulo("FOTOS");
+    }
 
   }, [deporteID]);
 
-
+  //.filter(doc => doc.data().evento.id === deporteID)
 
   return (
 

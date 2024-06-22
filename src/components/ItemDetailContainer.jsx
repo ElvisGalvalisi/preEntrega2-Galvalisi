@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { useParams } from 'react-router-dom'
-import datos from '../data/photos.json'
 import { ItemDetail } from './ItemDetail';
+import { doc, getDoc} from 'firebase/firestore'
+import { db } from '../firebase/config';
 
 
 export const ItemDetailContainer = () => {
@@ -15,10 +16,13 @@ export const ItemDetailContainer = () => {
 
 
     useEffect(() => {
-        setTimeout(() => {
-            setFoto(datos.find((ph) => ph.id === parseInt(itemID)));
-          }, 500);
-        
+
+        const docRef = doc(db, 'photos', itemID)
+
+        getDoc(docRef)
+        .then( (res)=>{
+            setFoto({...res.data(), id: res.id })
+        })   
 
     }, [itemID])
 
