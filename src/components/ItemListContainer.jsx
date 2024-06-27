@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { ItemList } from './ItemList'
 import { useParams } from 'react-router-dom'
 import { collection, getDocs, query, where } from 'firebase/firestore'
-import { db } from '../firebase/config'
+import { dataBase } from '../firebase/config'
 
 
 
@@ -18,12 +18,12 @@ export const ItemListContainer = ({ greeting }) => {
 
   useEffect(() => {
     //se crea la referencia a la base de datos para acceder a la colección.
-    const photoRef = collection(db, 'photos');
+    const photoRef = collection(dataBase, 'photos');
 
     //se filtran las categorias.
     const qry = deporteID ? query(photoRef, where("evento.id", "==", deporteID)) : photoRef;
 
-    const catagoriaRef = collection(db, 'categorias');
+    const catagoriaRef = collection(dataBase, 'categorias');
     let qryCat = deporteID && query(catagoriaRef, where('id', "==", deporteID))
 
     //para traer los documentos de la colección.

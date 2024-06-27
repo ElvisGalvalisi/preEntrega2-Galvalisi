@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom"
 import { CartWidget } from "./CartWidget"
 import { collection, getDocs, query, where } from 'firebase/firestore'
-import { db } from '../firebase/config'
+import { dataBase } from '../firebase/config'
 
 
 export const NavBar = () => {
     let [categorias, setCategorias] = useState([]);
 
     useEffect(() => {
-        const catagoriaRef = collection(db, 'categorias');
+        const catagoriaRef = collection(dataBase, 'categorias');
         getDocs(catagoriaRef)
             .then((res) => {
                 setCategorias(res.docs.map((doc) => {
@@ -27,6 +27,9 @@ export const NavBar = () => {
                 <ul className="menu-nav">
                     <li className="lista-nav">
                         <NavLink to="/" activeclassname="active" className="navLink" >INICIO</NavLink>
+                    </li>
+                    <li className="lista-nav">
+                        <NavLink to="/sobre-mi" activeclassname="active" className="navLink" >SOBRE MI</NavLink>
                     </li>
                     {
                         categorias.map((cat) => {

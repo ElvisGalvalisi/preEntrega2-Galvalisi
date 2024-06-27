@@ -7,6 +7,8 @@ import { NotFound } from './components/NotFound';
 import { ItemDetailContainer } from './components/ItemDetailContainer';
 import { Carrito } from './components/Carrito';
 import { CartProvider} from './context/CartContext';
+import { CheckOut } from './components/CheckOut';
+import { SobreMi} from './components/SobreMi';
 
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
           <Route path='/item/:itemID' element={<ItemDetailContainer />} />
           <Route path='/carrito' element={<Carrito />} />
           <Route path='/*' element={<NotFound />} />
+          <Route path='/finalizar-compra' element={<CheckOut />} />
+          <Route path='/sobre-mi' element={<SobreMi />} />
         </Routes>
 
         {/*<ItemListContainer greeting="Hola, soy una prop" />*/}

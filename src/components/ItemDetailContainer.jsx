@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { ItemDetail } from './ItemDetail';
-import { doc, getDoc} from 'firebase/firestore'
-import { db } from '../firebase/config';
+import { doc, getDoc } from 'firebase/firestore'
+import { dataBase } from '../firebase/config';
 
 
 export const ItemDetailContainer = () => {
@@ -10,29 +10,42 @@ export const ItemDetailContainer = () => {
     //se recibe el itemID por parametro
     let { itemID } = useParams();
 
-    let [foto, setFoto] = useState();
+    let [foto, setFoto] = useState(undefined);
 
+    let [cargando, setCargando] = useState(true);
 
 
 
     useEffect(() => {
 
-        const docRef = doc(db, 'photos', itemID)
+        const docRef = doc(dataBase, 'photos', itemID)
 
         getDoc(docRef)
-        .then( (res)=>{
-            setFoto({...res.data(), id: res.id })
-        })   
+            .then((res) => {
+                if (res.data()) {
+                    setFoto({ ...res.data(), id: res.id });
+                }
+                setCargando(false);
+
+            })
 
     }, [itemID])
 
 
 
+    if (cargando) {
+        return (
+            <h2>Ampliando Fotografía...</h2>
+        )
+    } else if (foto) {
+        return <ItemDetail photo={foto} />
+    } else {
+        return (
+            <>
+                <h2>La foto no se encuentra en el catálogo. </ h2>
+                <Link to='/'>Volver</Link>
+            </>
+        )
+    }
 
-    return (
-
-        <div>
-            {foto ? <ItemDetail photo={foto} /> : "Ampliando Fotografía..."}
-        </div>
-    )
 }

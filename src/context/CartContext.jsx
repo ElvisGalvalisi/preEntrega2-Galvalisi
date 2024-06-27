@@ -19,6 +19,7 @@ export const CartProvider = ({ children }) => {
 
         if (agregadoAlCarrito) {
             agregadoAlCarrito.cant += cant;
+            
         } else {
             carritoNuevo.push(phAgregada);
         }
@@ -31,13 +32,13 @@ export const CartProvider = ({ children }) => {
 
 
 
-
     const calcularCantidad = () => {
         return carrito.length;
     }
 
+
     const calcularTotal = () => {
-        return carrito.reduce((cont, ph) => cont + ph.precio, 0)
+        return  carrito.reduce((cont, ph) => cont + (ph.precio * ph.cant), 0)
     }
 
     const vaciarCarrito = () => {

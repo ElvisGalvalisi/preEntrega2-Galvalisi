@@ -1,7 +1,12 @@
-
+import silueta from '../assets/silueta.png'
 
 export const SobreMi = () => {
   return (
-    <h1 className="sobreMi">Mi nombre es Elvis, soy fotógrafo deportivo desde hace 7 años</h1>
+    <div className='container' >
+      <img className="foto-silueta" src={silueta} alt="fotografo" />
+       <h2 className="sobreMi">Mi nombre es Elvis Galvalisi</h2>
+       <p>Soy fotógrafo deportivo desde hace 7 años. Actualmente cubro eventos deportivos durante los fines de semana.</p>
+    </div>
+   
   )
 }
