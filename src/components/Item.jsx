@@ -6,7 +6,10 @@ import { ItemContador } from './ItemContador'
 
 
 export const Item = ({ foto }) => {
+
   const { agregarAlCarrito } = useContext(CartContext);
+
+  const cantidad = 1;
 
   return (
     <div className='card-foto' >
@@ -17,7 +20,8 @@ export const Item = ({ foto }) => {
         <Link className='item-foto-ampliar' to={`/item/${foto.id}`}>
           Ampliar 👁‍🗨
         </Link>
-        <button onClick={ ()=> agregarAlCarrito(foto) } className='btn-Agregar'>Agregar al Carrito</button>
+
+       <button onClick={ ()=> agregarAlCarrito(foto, cantidad) } className='btn-Agregar'>Agregar al Carrito</button>
 
       </div>
       

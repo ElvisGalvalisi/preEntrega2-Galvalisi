@@ -47,7 +47,6 @@ export const ItemListContainer = ({ greeting }) => {
 
   }, [deporteID]);
 
-  //.filter(doc => doc.data().evento.id === deporteID)
 
   return (
 

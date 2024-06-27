@@ -7,38 +7,30 @@ export const CartProvider = ({ children }) => {
 
     const [carrito, setCarrito] = useState([]);
 
-    
-   /* const [contador, setContador] = useState(1)
 
+    const agregarAlCarrito = (photo, cant) => {
 
-    const handleSumar = () => {
-        setContador(contador + 1);
-    }
-
-    const handleRestar = () => {
-        contador > 1 && setContador(contador - 1);
-    }*/
-
-    const agregarAlCarrito = (ph) => {
-
-        setCarrito([...carrito, ph] )
+        const phAgregada = { ...photo, cant };
         
-        /*const itemAgregado = { ...photo };
-
         const carritoNuevo = [...carrito];
-        const agregadoAlCarrito = carritoNuevo.find((ph) => ph.id === itemAgregado.id);
-
-
-        /*if (agregadoAlCarrito) {
-            agregadoAlCarrito += 1;
-        } else {
-            carritoNuevo.push(itemAgregado);
-        }*/
-
-
-        /*setCarrito(carritoNuevo);*/
         
+        const agregadoAlCarrito = carritoNuevo.find( (ph) => ph.id == phAgregada.id);
+        
+
+        if (agregadoAlCarrito) {
+            agregadoAlCarrito.cant += cant;
+        } else {
+            carritoNuevo.push(phAgregada);
+        }
+
+        
+        setCarrito(carritoNuevo);
+
     }
+
+
+
+
 
     const calcularCantidad = () => {
         return carrito.length;
@@ -52,8 +44,18 @@ export const CartProvider = ({ children }) => {
         return setCarrito([])
     }
 
+    const quitarProducto = (photo) => {
+        const phEncontrado = carrito.find(ph => ph.id === photo.id)
+        const index = carrito.indexOf(phEncontrado);
+
+        const carritoActualizado = [...carrito];
+        carritoActualizado.splice(index, 1);
+        setCarrito(carritoActualizado);
+
+    }
+
     return (
-        <CartContext.Provider value={{ carrito, calcularCantidad, calcularTotal, vaciarCarrito, agregarAlCarrito }}>
+        <CartContext.Provider value={{ carrito, calcularCantidad, calcularTotal, vaciarCarrito, agregarAlCarrito, quitarProducto }}>
 
             {children}
 

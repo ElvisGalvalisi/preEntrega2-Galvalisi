@@ -270,6 +270,8 @@ margin-bottom: 1rem;
 .item-foto-carrito{
     height: 100px;
     width: auto;
+    padding-left: 1rem;
+    align-items: center;
 }
 
 .btn-suma-resta{
@@ -283,7 +285,8 @@ margin-bottom: 1rem;
 
 .th-td{
     text-align: center;
-    padding-left: 1rem;
+    padding-left: 2rem;
+    align-items: center;  
     
 }
 
@@ -296,3 +299,4 @@ margin-bottom: 1rem;
 [table]{
     user-select: none;
 }
+
