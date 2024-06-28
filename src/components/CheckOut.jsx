@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../context/CartContext";
 import { useForm } from "react-hook-form";
-import { collection, addDoc, query, getDocs, limit, orderBy, doc } from "firebase/firestore";
+import { collection, addDoc, query, getDocs, limit, orderBy, where } from "firebase/firestore";
 import { dataBase } from '../firebase/config';
 import { Link } from "react-router-dom";
-import { QueryCompositeFilterConstraint } from "firebase/firestore/lite";
+
 
 export const CheckOut = () => {
 
@@ -13,6 +13,7 @@ export const CheckOut = () => {
     //se importan las funciones necesarias para manejar el fomrulario.
     const { register, handleSubmit } = useForm();
     const [ultimoNumero, setUltimoNumero] = useState(null);
+    const [orden, setOrden] = useState([]);
     const [docId, setDocId] = useState("")
 
     //obtener último nro de orden
@@ -53,28 +54,33 @@ export const CheckOut = () => {
             total: calcularTotal()
         }
 
-        const ordenRef = collection(dataBase, 'ordenes')
+        const ordenRef = collection(dataBase, 'ordenes');
 
         addDoc(ordenRef, orden)
             .then((doc) => setDocId(doc.id))
+        vaciarCarrito();
 
     }
 
+
     if (docId) {
+
+
         return (
             <div className="orden-compra">
                 <h2>Muchas gracias por adquirir las fotografías.</h2>
 
                 <p>La Orden <strong>N" #{ultimoNumero}</strong> está siendo preparada.</p>
 
-                <p>En las próximas 24hs recibirá las fotos en la casilla de correo proporcionada.</p>
-                
+
+                <p>Por mail recibirá las formas de pago, una vez confirmado el mismo, recibirá las fotos en la casilla de correo proporcionada.</p>
+
                 <p>Código de Identificación: {docId}</p>
                 <button className="btn-Agregar">
-                    <Link to='/'  className="navLink" onClick={vaciarCarrito()} >Ir al Inicio</Link>
+                    <Link to='/' className="navLink" >Ir al Inicio</Link>
                 </button>
 
-                
+
 
             </div>
         )
@@ -84,10 +90,11 @@ export const CheckOut = () => {
         <div className="container">
             <form className="container-form" onSubmit={handleSubmit(generarOrden)}>
                 <label >Ingrese Apellido y Nombre</label><br />
-                <input className="item-form" type="text" placeholder="Apellido y Nombre" {...register('nombreCompleto')} /><br />
+                <input className="item-form" type="text" placeholder="Apellido y Nombre" required {...register('nombreCompleto')} /><br />
                 <label >Ingrese su E-mail</label><br />
-                <input className="item-form" type="e-mail" placeholder="su-email@mail.com" {...register('e-mail')} /><br />
+                <input className="item-form" type="e-mail" placeholder="su-email@mail.com" required {...register('e-mail')} /><br />
                 <button className="btn-Agregar" type="submit">CONFIMAR PEDIDO</button>
+                <Link to='/' className='btn-Seguir' >SEGUIR ELIGIENDO</Link>
 
             </form>
         </div>

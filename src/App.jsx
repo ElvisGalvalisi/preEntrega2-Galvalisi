@@ -9,6 +9,7 @@ import { Carrito } from './components/Carrito';
 import { CartProvider} from './context/CartContext';
 import { CheckOut } from './components/CheckOut';
 import { SobreMi} from './components/SobreMi';
+import { Contacto } from './components/Contacto';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path='/*' element={<NotFound />} />
           <Route path='/finalizar-compra' element={<CheckOut />} />
           <Route path='/sobre-mi' element={<SobreMi />} />
+          <Route path='/contacto' element={<Contacto />} />
         </Routes>
 
         {/*<ItemListContainer greeting="Hola, soy una prop" />*/}

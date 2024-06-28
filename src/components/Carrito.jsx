@@ -45,10 +45,7 @@ export const Carrito = () => {
             </table>
             <button className='btn-Vaciar' onClick={vaciarCarrito}> VACIAR </button>
             <Link to='/finalizar-compra' className='btn-Finalizar' >FINALIZAR ORDEN</Link>
-            <Link to='/' className='btn-Seguir' >SEGUIR ELIGIENDO</Link>
-            
-            
-            
+
             
           </> : <h2 className='notFound'> Carrito vacío  </h2>
       }

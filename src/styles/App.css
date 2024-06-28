@@ -5,7 +5,8 @@ body {
     color: rgb(214, 210, 210);
     padding-bottom: 0;
     font-style: solid bold;
-    
+    user-select: none;
+
 }
 
 .prosto-one-regular {
@@ -52,12 +53,13 @@ header {
 .navLink {
     text-decoration: none;
     color: aliceblue;
+    padding: 0.5rem;
 }
 
 .navLink.active {
     font-weight: bold;
     text-decoration: underline darkred;
-    
+
 }
 
 .lista-nav:hover {
@@ -82,13 +84,13 @@ header {
     grid-auto-flow: dense;
     grid-auto-rows: 20rem;
     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-    
-    
+
+
 }
 
 
 
-.card-foto{
+.card-foto {
     text-align: center;
     margin-bottom: 15px;
 }
@@ -103,17 +105,18 @@ header {
     margin: auto;
     display: flex;
     justify-content: center;
-    
+
 }
 
-.titulo-item-foto{
+.titulo-item-foto {
     margin-top: 0.5rem;
     font-size: 15px;
 }
 
 
 
-.item-foto-ampliar, .item-foto-ampliar:visited{
+.item-foto-ampliar,
+.item-foto-ampliar:visited {
     color: rgb(165, 2, 2);
     text-decoration: none;
     font-size: 15px;
@@ -121,7 +124,7 @@ header {
 }
 
 
-.titulo-foto{
+.titulo-foto {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
@@ -134,53 +137,53 @@ header {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 3.5em;
+    height: 6rem;
     text-align: center;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 
 }
 
-.derechos {
-    margin-top: 1.25rem;
-    color: whitesmoke;
-}
+.texto-footer {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
 
-.nombre {
-    margin-top: 1.25rem;
-    color: whitesmoke;
 }
 
 .redes {
-    margin-top: 0.8rem;
+    margin-top: .1rem;
     list-style-type: none;
-
 }
 
+.lista-redes {
+    padding-top: 0;
+}
 
-
-.img-redes {    
+.img-redes {
     height: 25px;
     width: 25px;
-    margin: .1em .5em;
-    text-align: center;
+    margin: 0.5em;
+
 }
 
-.notFound{
+.notFound {
     display: grid;
     grid-template-columns: 1fr;
     margin: 100px auto;
     text-align: center;
 }
 
-.eventosDeportivos{
+.eventosDeportivos {
     display: flex;
     justify-content: start;
     margin: 15px;
 }
 
 
-.card-foto-ampliada{
+.card-foto-ampliada {
     margin-top: 2rem;
     text-align: center;
     font-size: 30px;
@@ -189,7 +192,7 @@ header {
 
 
 
-.item-foto-ampliada{
+.item-foto-ampliada {
     width: auto;
     height: 35rem;
     text-align: center;
@@ -197,7 +200,7 @@ header {
     margin-top: 0;
 }
 
-.item-contador{
+.item-contador {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -205,12 +208,12 @@ header {
     margin-bottom: 0;
     padding-bottom: 0;
     color: rgb(214, 210, 210);
- 
+
 }
 
 
 
-.btn-Agregar{
+.btn-Agregar {
     margin-top: 0.5em;
     margin-left: .5em;
     background-color: rgb(19, 22, 20);
@@ -218,21 +221,22 @@ header {
     font-size: 15px;
 }
 
-.btn-Vaciar{
+.btn-Vaciar {
     margin-top: 0.5em;
     margin-left: 1em;
-    background: linear-gradient(to left,  rgb(248, 47, 47), rgb(88, 23, 23));
-    
+    background: linear-gradient(to left, rgb(248, 47, 47), rgb(88, 23, 23));
+
     color: rgb(19, 22, 20);
     font-size: 25px;
-    
+
 }
 
-.btn-Vaciar:hover{
+.btn-Vaciar:hover {
     background: rgb(197, 7, 7);
     color: rgb(19, 22, 20);
 }
-.carrito{
+
+.carrito {
     display: flex;
     align-items: center;
     width: 30px;
@@ -240,128 +244,159 @@ header {
     margin-right: 2rem;
 }
 
-.carrrito-widget{
+.carrrito-widget {
     text-decoration: none;
 }
 
-.carrito-container{
+.carrito-container {
     user-select: none;
 }
 
 
-.contador-widget{
+.contador-widget {
     background-color: rgb(167, 37, 37);
     border-radius: 40%;
     text-align: center;
     font-size: 17px;
     padding-right: 1.5px;
     margin-top: 1rem;
-    
-    
+
+
 }
 
 
-.encabezado-carrito{
+.encabezado-carrito {
 
-text-align: center;
-font-size: 20px;
-margin-bottom: 1rem;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 1rem;
 }
 
-.item-foto-carrito{
+.item-foto-carrito {
     height: 100px;
     width: auto;
     padding-left: 1rem;
     align-items: center;
 }
 
-.btn-suma-resta{
+.btn-suma-resta {
     margin: 0.5em;
     margin-top: .5rem;
 }
 
-.btn-suma-resta:hover, .btn-Agregar:hover, .btn-Vaciar:hover, .item-foto-ampliar:hover{
+.btn-suma-resta:hover,
+.btn-Agregar:hover,
+.btn-Vaciar:hover,
+.item-foto-ampliar:hover {
     cursor: pointer;
 }
 
-.th-td{
+.th-td {
     text-align: center;
     padding-left: 2rem;
-    align-items: center;  
-    
+    align-items: center;
+
 }
 
-.btn-borrar{
+.btn-borrar {
     background-color: black;
     margin-left: 2rem;
     font-size: large;
-    
+
 }
-[table]{
+
+[table] {
     user-select: none;
 }
 
-.btn-Finalizar{
+.btn-Finalizar {
     margin-top: 0.5em;
     margin-left: 1em;
-    background: linear-gradient(to left,  rgb(226, 227, 231),  rgb(58, 59, 61));
+    background: linear-gradient(to left, rgb(226, 227, 231), rgb(58, 59, 61));
     text-decoration: none;
     color: rgb(19, 22, 20);
-    font-size: 23px;
+    font-size: 20px;
     border: 4px solid rgb(85, 85, 211);
-    
-    
+
+
 }
-.btn-Seguir{
+
+.btn-Seguir {
     margin-top: 0.5em;
     margin-left: 1em;
-    background: linear-gradient(to left,  rgb(132, 139, 127), rgb(61, 78, 52));
+    background: linear-gradient(to left, rgb(132, 139, 127), rgb(61, 78, 52));
     text-decoration: none;
     color: rgb(19, 22, 20);
-    font-size: 23px;
+    font-size: 20px;
     border: 4px solid rgb(2, 163, 2);
 }
 
-.orden-compra{
+.btn-Agregar {
+    margin-top: 0.5em;
+    margin-left: .5em;
+    background-color: rgb(19, 22, 20);
+    color: rgb(167, 37, 37);
+    font-size: 20px;
+}
+
+.orden-compra {
     width: 50%;
     place-content: center;
     background: linear-gradient(to right, rgba(39, 8, 8, 0.562), rgba(0, 0, 0, 0.562), rgb(0, 0, 0));
     text-align: center;
     margin: 15% 25%;
     padding: 3rem;
-    border:double 2px gray;
+    border: double 2px gray;
 }
 
- .orden-compra p, h2 {
+.orden-compra p,
+h2 {
     padding: 5px
-
 }
 
-.container{
+.container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
-.sobreMi{
+
+.sobreMi {
     width: 30%;
-    text-align: center;
+    text-align: left;
     margin: 0;
+    line-height: 1.7;
+    font-size: 30px;
 }
 
-.foto-silueta{
-    transition: left;
+.container-sobreMi {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container-sobreMi:hover .foto-silueta{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.foto-silueta {
     width: 30%;
     height: 30%;
     box-shadow: 55%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateX(-100%);
+    opacity: 0;
 }
 
-.container-form{
+.container-form {
     align-items: start;
-    width:70%;
+    width: 70%;
     padding: 0.1rem;
     margin: 2rem;
 }
-.item-form{
+
+.item-form {
     width: 70%;
     margin-top: 0.5rem;
     margin-bottom: 1rem;
@@ -369,5 +404,3 @@ margin-bottom: 1rem;
     font-size: larger;
 
 }
-
-

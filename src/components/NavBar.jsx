@@ -28,9 +28,9 @@ export const NavBar = () => {
                     <li className="lista-nav">
                         <NavLink to="/" activeclassname="active" className="navLink" >INICIO</NavLink>
                     </li>
-                    <li className="lista-nav">
+                    {/*<li className="lista-nav">
                         <NavLink to="/sobre-mi" activeclassname="active" className="navLink" >SOBRE MI</NavLink>
-                    </li>
+    </li>*/}
                     {
                         categorias.map((cat) => {
                             return (
