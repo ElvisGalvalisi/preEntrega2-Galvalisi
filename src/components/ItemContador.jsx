@@ -1,7 +1,6 @@
 
 export const ItemContador = ({cant, sumar, restar, agregar}) => {
 
-    
 
     return (
         <div className='item-contador'>

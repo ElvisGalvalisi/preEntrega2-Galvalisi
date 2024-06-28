@@ -30,9 +30,6 @@ function App() {
           <Route path='/sobre-mi' element={<SobreMi />} />
           <Route path='/contacto' element={<Contacto />} />
         </Routes>
-
-        {/*<ItemListContainer greeting="Hola, soy una prop" />*/}
-
         <Footer />
       </BrowserRouter>
     </CartProvider>

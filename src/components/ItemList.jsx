@@ -15,7 +15,7 @@ export const ItemList = ({ fotos }) => {
             return <Item key={foto.id} foto={foto} />
          
           })
-          : <h3>Cargando fotografías.</h3>
+          : <h3>Cargando fotografías...</h3>
       }
     </div>
 

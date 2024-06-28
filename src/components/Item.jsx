@@ -2,7 +2,6 @@
 import { Link } from 'react-router-dom'
 import { CartContext } from '../context/CartContext'
 import { useContext } from 'react'
-import { ItemContador } from './ItemContador'
 
 
 export const Item = ({ foto }) => {

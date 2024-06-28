@@ -7,7 +7,6 @@ export const ItemDetail = ({ photo }) => {
 
   const { carrito, agregarAlCarrito } = useContext(CartContext);
 
-  //console.log(carrito);
 
   const [contador, setContador] = useState(1);
 

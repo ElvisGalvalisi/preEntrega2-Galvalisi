@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { addDoc, collection } from "firebase/firestore";
 import { dataBase } from '../firebase/config';
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 export const Contacto = () => {
@@ -28,9 +29,12 @@ export const Contacto = () => {
             <div className="orden-compra">
                 <h2>¡Consulta enviada!</h2>
 
-                <p>En breve recibirá una respuesta en la casilla de correo proporcionada.</p>
+                <p>En breve recibirá una respuesta en la casilla de correo proporcionada en el formulario.</p>
                 
-                <p>Código de Identificación: {docID}</p>
+                <p>Código: {docID}</p>
+                <button className="btn-Agregar">
+                    <Link to='/' className="navLink" >Ir al Inicio</Link>
+                </button>
                                 
 
             </div>

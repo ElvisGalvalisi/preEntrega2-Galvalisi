@@ -7,7 +7,7 @@ import { dataBase } from '../firebase/config'
 
 
 //recibe la prop del padre por parámetro.
-export const ItemListContainer = ({ greeting }) => {
+export const ItemListContainer = () => {
 
   //se recibe el id de categoria por parámetro en el useParams
   let { deporteID } = useParams();
@@ -51,7 +51,7 @@ export const ItemListContainer = ({ greeting }) => {
   return (
 
     <div className="photo-container">
-      {/*<h1> {greeting} </h1>*/}
+      
       <h2 className='titulo-foto'>{titulo}</h2>
 
       <ItemList fotos={fotos} />

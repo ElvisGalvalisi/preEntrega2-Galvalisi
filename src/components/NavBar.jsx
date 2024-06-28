@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom"
+import {  NavLink } from "react-router-dom"
 import { CartWidget } from "./CartWidget"
-import { collection, getDocs, query, where } from 'firebase/firestore'
+import { collection, getDocs } from 'firebase/firestore'
 import { dataBase } from '../firebase/config'
 
 
@@ -28,9 +28,7 @@ export const NavBar = () => {
                     <li className="lista-nav">
                         <NavLink to="/" activeclassname="active" className="navLink" >INICIO</NavLink>
                     </li>
-                    {/*<li className="lista-nav">
-                        <NavLink to="/sobre-mi" activeclassname="active" className="navLink" >SOBRE MI</NavLink>
-    </li>*/}
+                    
                     {
                         categorias.map((cat) => {
                             return (

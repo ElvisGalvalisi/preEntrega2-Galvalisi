@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../context/CartContext";
 import { useForm } from "react-hook-form";
-import { collection, addDoc, query, getDocs, limit, orderBy, where } from "firebase/firestore";
+import { collection, addDoc, query, getDocs, limit, orderBy } from "firebase/firestore";
 import { dataBase } from '../firebase/config';
 import { Link } from "react-router-dom";
 
@@ -13,7 +13,7 @@ export const CheckOut = () => {
     //se importan las funciones necesarias para manejar el fomrulario.
     const { register, handleSubmit } = useForm();
     const [ultimoNumero, setUltimoNumero] = useState(null);
-    const [orden, setOrden] = useState([]);
+    
     const [docId, setDocId] = useState("")
 
     //obtener último nro de orden
