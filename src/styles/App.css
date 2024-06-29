@@ -298,6 +298,10 @@ header {
 
 }
 
+.total-carrito{
+    font-size: 20px;
+}
+
 .btn-borrar {
     background-color: black;
     margin-left: 2rem;

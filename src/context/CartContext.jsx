@@ -1,11 +1,14 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 //se inicializa el contexto de Carrito
 export const CartContext = createContext();
 
+//estado inicial del carrito
+const inicioCarrito = JSON.parse(localStorage.getItem('carrito')) || []; 
+
 export const CartProvider = ({ children }) => {
 
-    const [carrito, setCarrito] = useState([]);
+    const [carrito, setCarrito] = useState(inicioCarrito);
 
 
     const agregarAlCarrito = (photo, cant) => {
@@ -52,8 +55,13 @@ export const CartProvider = ({ children }) => {
         const carritoActualizado = [...carrito];
         carritoActualizado.splice(index, 1);
         setCarrito(carritoActualizado);
-
     }
+
+    //manejo de estado del localStorage
+    useEffect(() => {
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+    }, [carrito]);
+    
 
     return (
         <CartContext.Provider value={{ carrito, calcularCantidad, calcularTotal, vaciarCarrito, agregarAlCarrito, quitarProducto }}>

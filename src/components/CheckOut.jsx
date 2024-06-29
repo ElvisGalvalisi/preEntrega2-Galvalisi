@@ -65,20 +65,20 @@ export const CheckOut = () => {
 
     if (docId) {
 
-
+        
         return (
             <div className="orden-compra">
                 <h2>Muchas gracias por adquirir las fotografías.</h2>
-
+            
                 <p>La Orden <strong>N" #{ultimoNumero}</strong> está siendo preparada.</p>
-
-
+               
                 <p>Por mail recibirá las formas de pago, una vez confirmado el mismo, recibirá las fotos en la casilla de correo proporcionada.</p>
 
                 <p>Código de Identificación: {docId}</p>
                 <button className="btn-Agregar">
                     <Link to='/' className="navLink" >Ir al Inicio</Link>
                 </button>
+
 
 
 

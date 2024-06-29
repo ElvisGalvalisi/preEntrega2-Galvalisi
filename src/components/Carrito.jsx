@@ -40,7 +40,10 @@ export const Carrito = () => {
               </tbody>
 
               <tfoot>
-                <h3>Total: ${calcularTotal() }</h3>
+                <tr>
+                  <td className='total-carrito'>Total:............ ${calcularTotal() }</td>
+                </tr>
+                
               </tfoot>
             </table>
             <button className='btn-Vaciar' onClick={vaciarCarrito}> VACIAR </button>
