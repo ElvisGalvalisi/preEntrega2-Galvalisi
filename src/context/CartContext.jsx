@@ -34,9 +34,9 @@ export const CartProvider = ({ children }) => {
         Swal.fire({
             text: "¡Foto agregada al carrito!",
             icon: "success",
+            timer:1000,
+            showConfirmButton: false,
             iconColor: 'green',
-            confirmButtonColor: '#A50202',
-            color: 'white',
             background: 'black'
           });
 
@@ -59,8 +59,8 @@ export const CartProvider = ({ children }) => {
             text: "¡Carrito vacío!",
             icon: "info",
             iconColor: 'red',
-            confirmButtonColor: '#A50202',
-            color: 'white',
+            timer:1000,
+            showConfirmButton: false,
             background: 'black'
           });
         return setCarrito([])
@@ -75,10 +75,10 @@ export const CartProvider = ({ children }) => {
         setCarrito(carritoActualizado);
         Swal.fire({
             text: "¡Foto quitada del carrito!",
-            icon: "info",
+            icon: "error",
             iconColor: 'red',
-            confirmButtonColor: '#A50202',
-            color: 'white',
+            timer:1000,
+            showConfirmButton: false,
             background: 'black'
           });
     }
