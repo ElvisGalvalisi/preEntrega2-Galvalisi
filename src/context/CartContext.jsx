@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from "react";
+import Swal from 'sweetalert2';
 
 //se inicializa el contexto de Carrito
 export const CartContext = createContext();
@@ -30,6 +31,15 @@ export const CartProvider = ({ children }) => {
         
         setCarrito(carritoNuevo);
 
+        Swal.fire({
+            text: "¡Foto agregada al carrito!",
+            icon: "success",
+            iconColor: 'green',
+            confirmButtonColor: '#A50202',
+            color: 'white',
+            background: 'black'
+          });
+
     }
 
 
@@ -45,6 +55,14 @@ export const CartProvider = ({ children }) => {
     }
 
     const vaciarCarrito = () => {
+        Swal.fire({
+            text: "¡Carrito vacío!",
+            icon: "info",
+            iconColor: 'red',
+            confirmButtonColor: '#A50202',
+            color: 'white',
+            background: 'black'
+          });
         return setCarrito([])
     }
 
@@ -55,6 +73,14 @@ export const CartProvider = ({ children }) => {
         const carritoActualizado = [...carrito];
         carritoActualizado.splice(index, 1);
         setCarrito(carritoActualizado);
+        Swal.fire({
+            text: "¡Foto quitada del carrito!",
+            icon: "info",
+            iconColor: 'red',
+            confirmButtonColor: '#A50202',
+            color: 'white',
+            background: 'black'
+          });
     }
 
     //manejo de estado del localStorage
