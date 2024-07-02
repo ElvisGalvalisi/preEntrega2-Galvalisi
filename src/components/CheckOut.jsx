@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { collection, addDoc, query, getDocs, limit, orderBy } from "firebase/firestore";
 import { dataBase } from '../firebase/config';
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 export const CheckOut = () => {
@@ -13,7 +14,7 @@ export const CheckOut = () => {
     //se importan las funciones necesarias para manejar el fomrulario.
     const { register, handleSubmit } = useForm();
     const [ultimoNumero, setUltimoNumero] = useState(null);
-    
+
     const [docId, setDocId] = useState("")
 
     //obtener último nro de orden
@@ -58,24 +59,36 @@ export const CheckOut = () => {
 
         addDoc(ordenRef, orden)
             .then((doc) => setDocId(doc.id))
-        vaciarCarrito();
+
+
+
+        Swal.fire({
+            text: "¡Pedido Confirmado!",
+            icon: "success",
+            timer: 1000,
+            showConfirmButton: false,
+            iconColor: 'green',
+            background: 'black'
+        });
+
+        
 
     }
 
 
     if (docId) {
 
-        
+
         return (
             <div className="orden-compra">
                 <h2>Muchas gracias por adquirir las fotografías.</h2>
-            
+
                 <p>La Orden <strong>N" #{ultimoNumero}</strong> está siendo preparada.</p>
-               
-                <p>Por mail recibirá las formas de pago, una vez confirmado el mismo, recibirá las fotos en la casilla de correo proporcionada.</p>
+
+                <p>Por e-mail recibirá las formas de pago y las fotografías elegidas una vez que se acredite el pago.</p>
 
                 <p>Código de Identificación: {docId}</p>
-                <button className="btn-Agregar">
+                <button onClick={()=>vaciarCarrito()} className="btn-Agregar">
                     <Link to='/' className="navLink" >Ir al Inicio</Link>
                 </button>
 

@@ -3,6 +3,7 @@ import { addDoc, collection } from "firebase/firestore";
 import { dataBase } from '../firebase/config';
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2';
 
 
 export const Contacto = () => {
@@ -21,6 +22,15 @@ export const Contacto = () => {
 
         addDoc(contactoRef, datosContacto)
         .then((doc) => setDocID(doc.id))
+
+        Swal.fire({
+            text: "¡Consulta enviada correctamente!",
+            icon: "success",
+            timer: 1000,
+            showConfirmButton: false,
+            iconColor: 'green',
+            background: 'black'
+        });
         
     }
 
