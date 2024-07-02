@@ -494,9 +494,9 @@ h2 {
     }
 
     .img-redes {
-        height: 1px;
-        width: 1px;
-        margin: 0;
+        height: 12px;
+        width: 12px;
+        margin: 0.2;
 
     }
 
@@ -597,22 +597,30 @@ h2 {
 }
 
 @media (max-height: 650px) or (max-width: 400px) {
-    .texto-footer {
+
+    body {
         font-size: 10px;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        width: 100%;
     }
 
+    header {
+        font-size: 10px;
+        padding-right: 5px;
+    }
+
+    .container.navLink{
+        font-size: 10px;
+    }
     .sobreMi {
         width: 30%;
-        line-height: 0.5;
+        line-height: 1;
         font-size: 12px;
     }
 
     .texto-footer {
-        font-size: 18px;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
+        font-size: 10px;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
     }
 
 }
