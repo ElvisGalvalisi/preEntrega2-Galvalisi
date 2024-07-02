@@ -417,21 +417,78 @@ h2 {
 }
 
 /*--------------RESPONSIVE----------------------*/
+
+
+
+@media (max-height: 650px) or (max-width:1024px) {
+
+    body {
+        font-size: 12px;
+    }
+
+    .sobreMi {
+        line-height: 1.3;
+        font-size: 18px;
+    }
+
+    .encabezado-carrito {
+        font-size: 10px;
+    }
+
+    .th-td {
+        padding-left: 0.5rem;
+        font-size: 80%;
+
+    }
+
+    .total-carrito {
+        font-size: 15px;
+    }
+
+    .btn-borrar {
+        margin-left: .5rem;
+        font-size: medium;
+
+    }
+
+    .img-redes {
+        height: 20px;
+        width: 20px;
+        margin: 0.5em;
+
+    }
+
+    .texto-footer {
+        padding-top: 2rem;
+        padding-bottom: 1.25rem;
+        font-size: 15px;
+
+    }
+
+
+}
+
+
 @media (max-height: 650px) or (max-width:900px) {
 
-    html{
+    html {
         width: 100%;
     }
-    body{
+
+    body {
         font-size: 12px;
     }
-    header{
+
+    header {
         font-size: 12px;
     }
+
     .footer {
         height: 6rem;
     }
-    .lista-redes, ul{
+
+    .lista-redes,
+    ul {
         margin: 0;
         padding: 0;
     }
@@ -440,7 +497,7 @@ h2 {
         height: 1px;
         width: 1px;
         margin: 0;
-    
+
     }
 
     .texto-footer {
@@ -448,12 +505,13 @@ h2 {
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
+
     .sobreMi {
         width: 30%;
         line-height: 1;
-        font-size: 12px;
+        font-size: 15px;
     }
-    
+
 
     .item-foto-ampliada {
         width: auto;
@@ -471,113 +529,90 @@ h2 {
         height: 50px;
         margin-left: 10px;
     }
+
     .contador-widget {
         font-size: 13px;
     }
+
     .encabezado-carrito {
         font-size: 10px;
     }
+
     .th-td {
         padding-left: 0.5rem;
         font-size: 60%;
-    
+
     }
-    
+
     .total-carrito {
         font-size: 10px;
     }
+
     .texto-footer {
         padding-top: 1.5rem;
         padding-bottom: 0.5rem;
         font-size: 13px;
-    
+
     }
-   
-    
+
+
     .btn-borrar {
         margin-left: 0.5rem;
         font-size: xx-small;
-    
+
     }
+
     .item-foto-carrito {
         height: 30px;
         padding-left: 0.5rem;
     }
+
     .btn-Finalizar {
         margin-top: 0.5em;
         margin-left: 0.5em;
         font-size: 13px;
         border: 2px solid rgb(85, 85, 211);
-    
-    
+
+
     }
-    
+
     .btn-Seguir {
         margin-top: 0.5em;
         margin-left: 0.5em;
         font-size: 13px;
         border: 2px solid rgb(2, 163, 2);
     }
-    
+
     .btn-Agregar {
         font-size: 13px;
     }
-    
+
     .btn-Vaciar {
-        
+
         margin-left: 0.5em;
-        
+
         font-size: 15px;
-    
+
     }
 }
 
-@media (max-height: 650px) or (max-width:1024px) {
+@media (max-height: 650px) or (max-width: 400px) {
+    .texto-footer {
+        font-size: 10px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
 
-    body{
+    .sobreMi {
+        width: 30%;
+        line-height: 0.5;
         font-size: 12px;
     }
-    .sobreMi {
-        line-height: 1.3;
-        font-size: 18px;
-    }
-    .encabezado-carrito {
-        font-size: 10px;
-    }
-    .th-td {
-        padding-left: 0.5rem;
-        font-size: 80%;
-    
-    }
-    
-    .total-carrito {
-        font-size: 15px;
-    }
-    .btn-borrar {
-        margin-left: .5rem;
-        font-size: medium;
-    
-    }
-    .img-redes {
-        height: 20px;
-        width: 20px;
-        margin: 0.5em;
-    
-    }
+
     .texto-footer {
-        padding-top: 2rem;
-        padding-bottom: 1.25rem;
-        font-size: 15px;
-    
-    }
-    
-
-}
-
-@media (max-height: 650px) or (max-width:1310px) {
-    .sobreMi {
-        line-height: 1.4;
-        font-size: 22px;
+        font-size: 18px;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
     }
 
 }
