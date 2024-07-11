@@ -476,15 +476,15 @@ h2 {
     }
 
     body {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     header {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .footer {
-        height: 6rem;
+        height: 4rem;
     }
 
     .lista-redes,
@@ -500,16 +500,18 @@ h2 {
 
     }
 
+    
     .texto-footer {
-        font-size: 10px;
-        padding-top: 1rem;
+        padding-top: 1.3rem;
         padding-bottom: 1rem;
+        font-size: 13px;
+
     }
 
     .sobreMi {
         width: 30%;
         line-height: 1;
-        font-size: 15px;
+        font-size: 13px;
     }
 
 
@@ -546,13 +548,6 @@ h2 {
 
     .total-carrito {
         font-size: 10px;
-    }
-
-    .texto-footer {
-        padding-top: 1.5rem;
-        padding-bottom: 0.5rem;
-        font-size: 13px;
-
     }
 
 
