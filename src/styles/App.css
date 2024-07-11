@@ -6,6 +6,7 @@ body {
     padding-bottom: 0;
     font-style: solid bold;
     user-select: none;
+    height: auto;
 
 }
 
@@ -459,7 +460,7 @@ h2 {
     }
 
     .texto-footer {
-        padding-top: 2rem;
+        padding-top: 1,5rem;
         padding-bottom: 1.25rem;
         font-size: 15px;
 
@@ -469,10 +470,11 @@ h2 {
 }
 
 
-@media (max-height: 650px) or (max-width:900px) {
+@media (max-height: 650px) or (max-width:600px) {
 
     html {
         width: 100%;
+        height: 80%;
     }
 
     body {
@@ -502,17 +504,12 @@ h2 {
 
     
     .texto-footer {
-        padding-top: 1.3rem;
+        padding-top: 1rem;
         padding-bottom: 1rem;
         font-size: 13px;
 
     }
 
-    .sobreMi {
-        width: 30%;
-        line-height: 1;
-        font-size: 13px;
-    }
 
 
     .item-foto-ampliada {
@@ -589,33 +586,10 @@ h2 {
         font-size: 15px;
 
     }
+    .container-sobreMi {
+        
+        align-items: center;
+        
+        height: 100%;
+    }
 }
-/*
-@media (max-height: 650px) or (max-width: 400px) {
-
-    body {
-        font-size: 10px;
-        width: 100%;
-    }
-
-    header {
-        font-size: 10px;
-        padding-right: 5px;
-    }
-
-    .container.navLink{
-        font-size: 10px;
-    }
-    .sobreMi {
-        width: 30%;
-        line-height: 1;
-        font-size: 12px;
-    }
-
-    .texto-footer {
-        font-size: 10px;
-        padding-top: 2rem;
-        padding-bottom: 1rem;
-    }
-
-}*/
